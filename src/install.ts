@@ -2,7 +2,8 @@ import * as path from 'path';
 import * as chalk from 'chalk';
 import * as windows from 'node-windows';
 
-const serviceName = 'Dynamic IP Store [0.1.0]';
+const appPackage = require(path.join(__dirname, './../package.json'));
+const serviceName = `Dynamic IP Store [${appPackage.version}]`;
 const currentPath = path.join(__dirname, 'service.js');
 
 const svc = new windows.Service({
