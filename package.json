@@ -1,0 +1,36 @@
+{
+  "name": "dynamic-ip-store",
+  "version": "0.1.0",
+  "description": "",
+  "main": "./src/app.js",
+  "scripts": {
+    "prepublish": "tsc",
+    "postinstall": "node ./src/install.js",
+    "preuninstall": "node ./src/uninstall.js",
+    "start": "tsc & node ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barend-erasmus/dynamic-ip-store.git"
+  },
+  "author": "Barend Erasmus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barend-erasmus/dynamic-ip-store/issues"
+  },
+  "homepage": "https://github.com/barend-erasmus/dynamic-ip-store#readme",
+  "dependencies": {
+    "chalk": "^2.0.1",
+    "cron": "^1.2.1",
+    "node-windows": "^0.1.14",
+    "object-hash": "^1.1.8"
+  },
+  "devDependencies": {
+    "@types/chalk": "^0.4.31",
+    "@types/cron": "^1.2.1",
+    "@types/node": "^8.0.15"
+  },
+  "bin": {
+    "dynamic-ip-store": "./bin/dynamic-ip-store"
+  }
+}
